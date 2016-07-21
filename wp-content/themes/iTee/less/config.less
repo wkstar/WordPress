@@ -1,0 +1,185 @@
+/* Variables */
+
+@orange: #f29530;
+@lightBlue: #6fc8e6;
+@darkBlue: #0c2337;
+
+/* Colors */
+@color1: #333333;
+@color2: #f6f6f6;
+@color3: #ff8120;
+@color4: #ff6600;
+@color5: #afcadd;
+@color6: #005596; 
+@color7: #014478; 
+@color8: #ffffff; 
+
+
+/* fonts */
+
+@font-face {
+    font-family: 'courier_primeregular';
+    src: url('../fonts/courier_prime-webfont.eot');
+    src: url('../fonts/courier_prime-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/courier_prime-webfont.woff2') format('woff2'),
+         url('../fonts/courier_prime-webfont.woff') format('woff'),
+         url('../fonts/courier_prime-webfont.ttf') format('truetype'),
+         url('../fonts/courier_prime-webfont.svg#courier_primeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.fontFeature {
+	font-family: "ff-prater-script-web",sans-serif;
+	font-style: normal;
+	font-weight: 400;
+}
+
+.fontReg {
+	font-family: 'courier_primeregular';
+}
+
+@maxWidth: 900px;
+
+::selection {
+	background: @color3;
+	color: @color2;
+}
+
+/* placeholder colors */
+form input::-webkit-input-placeholder {
+  color: #666;
+}
+form input:-moz-placeholder {
+  color: #666;
+}
+form input::-ms-input-placeholder {
+  color: #666;
+}
+form input:-ms-input-placeholder {
+  color: #666;
+}
+
+/* focus */
+form input:focus::-webkit-input-placeholder {
+  color: #ccc;
+}
+form input:focus:-moz-placeholder {
+  color: #ccc;
+}
+form input:focus::-ms-input-placeholder {
+  color: #ccc;
+}
+form input:focus:-ms-input-placeholder {
+  color: #ccc;
+}
+
+/* mixins */
+.hide {
+	display: none;
+}
+
+.hideText {
+	color: transparent;
+	font: 0/0 a;
+}
+
+.bdrRadius (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.bdrRadiusLeft (@radius: 5px) {
+  border-radius: @radius 0 0 @radius;
+  -webkit-border-radius: @radius 0 0 @radius;
+  -moz-border-radius: @radius 0 0 @radius;
+}
+
+.bdrRadiusRight (@radius: 5px) {
+  border-radius: 0 @radius @radius 0;
+  -webkit-border-radius: 0 @radius @radius 0;
+  -moz-border-radius: 0 @radius @radius 0;
+}
+
+.bgSize {
+	-o-background-size: 100% 100%, auto;
+	-moz-background-size: 100% 100%, auto;
+	-webkit-background-size: 100% 100%, auto;
+	background-size: 100% 100%, auto;
+}
+
+.bg_size_half {
+	-o-background-size: 50% auto, auto;
+	-moz-background-size: 50% auto, auto;
+	-webkit-background-size: 50% auto, auto;
+	background-size: 50% auto, auto;
+}
+
+.bgSizeWidth {
+	-o-background-size: 100% auto, auto;
+	-moz-background-size: 100% auto, auto;
+	-webkit-background-size: 100% auto, auto;
+	background-size: 100% auto, auto;
+}
+
+.textShadow (@distance, @transparency, @color) {
+	text-shadow: @distance @distance @transparency @color;
+}
+
+.boxShadow (@distance: 10px, @strength: 5px, @color: #000000) {
+	-moz-box-shadow: @distance @distance @strength @color;
+	-webkit-box-shadow:  @distance @distance @strength @color;
+	box-shadow:  @distance @distance @strength @color;
+}
+
+.sprite {
+	background-image: url(/assets/img/template/sprite.png);
+	background-repeat: no-repeat;
+}
+
+.cover {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.center_image {
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.cw {
+  -ms-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.ccw {
+  -ms-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.transition(@time: .3s) {
+	transition: all @time ease-in-out;
+	-moz-transition: all @time ease-in-out;
+	-webkit-transition: all @time ease-in-out;
+}
+
+.trans(@thing: all) {
+	transition: @thing .3s ease-in-out;
+	-moz-transition: @thing .3s ease-in-out;
+	-webkit-transition: @thing .3s ease-in-out;
+}
+
+.buttonTrans(){
+	-webkit-transition: all 0.2s ease-in-out, font-size 0 linear;
+	transition: all 0.2s ease-in-out, font-size 0 linear;
+}
